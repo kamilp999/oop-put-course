@@ -1,48 +1,22 @@
-interface Game{  
-void GameSound();  
-void GameSound2(); 
-}  
-public class Game2 implements Game
-{  
-    public void GameSound()
-    {
-        System.out.println("WIN");
-    }  
-    public void GameSound2()
-    {
-        System.out.println("LOSE");
-    }  
-    public static void main(String args[])
-    {  
-        Game2 myGame = new Game2();  
-        myGame.GameSound();  
-        myGame.GameSound2(); 
-    }  
-} 
+interface Auto {
+  public void car_type();
+  public void color(); 
+}
 
-\\*************************************************************
+class Car implements Auto {
+  public void car_type() {
+    System.out.println("TOYOTA R1");
+  }
+  public void color() {
+    System.out.println("Red");
+  }
+}
 
-final class Game4  
-{    
-final String TitleGame;    
+public class Main {
+  public static void main(String[] args) {
+    Car Car_2 = new Car();  
+    Car_2.car_type();
+    Car_2.color();
+  }
+}
 
-public Game4(String TitleGame)  
-    {    
-    this.TitleGame=TitleGame;    
-    }  
-public String getTitleGame()
-    {    
-    return TitleGame;    
-    }    
-}    
-
-public class Game5  
-{  
-    
-public static void main(String args[])  
-    {  
-        Game4 element = new Game4("COD");  
-        String title = element.getTitleGame();  
-        System.out.println("Title: " + title);  
-    }  
-}  
